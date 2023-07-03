@@ -1,6 +1,6 @@
 public class Farenheit_to_Celsius {
     public static double farenheit_to_celsius(double celsius_degrees){
-        return 32*1.8+celsius_degrees;
+        return (celsius_degrees-32)*0.556;
     }
 
     public static void main(String[] args) {
