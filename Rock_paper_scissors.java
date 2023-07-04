@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
-public class Rock_paper_scissors {
+public class Rock_paper_scissors
+{
     public static String computers_choice(){
         String [] str = {"rock","paper","scissors"};
         Random rd = new Random();
@@ -10,44 +11,64 @@ public class Rock_paper_scissors {
         System.out.println(computer_choice);
         return computer_choice;
     }
-    public static void main(String[] args) {
-    
-            
-            String user_choice = "rock";
-            String computer_choice = Rock_paper_scissors.computers_choice();
-            if(user_choice=="rock"){
-               if(computer_choice=="scissors"){
-                System.out.println("user won");
-               } else if (computer_choice=="paper"){
-                System.out.println("computer won");   
-               }else{
-                System.out.println("tie");
-               }
-            }
-            if(user_choice=="scissors"){
-               if(computer_choice=="paper"){
-                System.out.println("user won");
-               } else if (computer_choice=="rock"){
-                System.out.println("computer won");   
-               }else{
-                System.out.println("tie");
-               }
-            }
-            if(user_choice=="paper"){
-               if(computer_choice=="rock"){
-                System.out.println("user won");
-               } else if (computer_choice=="scissors"){
-                System.out.println("computer won");   
-               }else{
-                System.out.println("tie");
-               }
-            }
-            
-          
-               
+  public static void main (String[]args)
+  {
+    try (Scanner sc = new Scanner (System.in)) {
+        String computer_choice = computers_choice();
+        String game_start = sc.nextLine ();
+        if (game_start.equals ("yes"))
+          {
+        String user_choice = sc.nextLine ();
+        if (user_choice.equals ("rock"))
+          {
+            if (computer_choice.equals ("scissors"))
+              {
+        	System.out.println ("user won");
+              }
+            else if (computer_choice.equals ("paper"))
+              {
+        	System.out.println ("computer won");
+              }
+            else
+              {
+        	System.out.println ("tie");
+              }
+          }
+        if (user_choice.equals ("scissors"))
+          {
+            if (computer_choice.equals ("paper"))
+              {
+        	System.out.println ("user won");
+              }
+            else if (computer_choice.equals ("rock"))
+              {
+        	System.out.println ("computer won");
+              }
+            else
+              {
+        	System.out.println ("tie");
+              }
+          }
+        if (user_choice.equals ("paper"))
+          {
+            if (computer_choice.equals ("rock"))
+              {
+        	System.out.println ("user won");
+              }
+            else if (computer_choice.equals ("scissors"))
+              {
+        	System.out.println ("computer won");
+              }
+            else
+              {
+        	System.out.println ("tie");
+              }
+          }
+          }
+    }
+
+  }
+}  
       
         
-        
-        
-    }
-}
+ 
